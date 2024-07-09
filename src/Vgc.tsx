@@ -14,10 +14,10 @@ function Vgc() {
   const commandDisplay = useAppSelector(state => state.commandDisplay.isOpen)
 
   return (
-    <div className='h-screen bg-green-300 flex flex-col'>
-        <Tabbar />
-        <div className='flex flex-1'>
+    <div className='h-screen bg-green-300 flex'>
           <Sidebar />
+        <div className='flex flex-col flex-1'>
+          <Tabbar />
           <Editor />
         </div>
         { commandDisplay ? <Command /> : <></> }
