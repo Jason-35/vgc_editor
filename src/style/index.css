@@ -6,3 +6,11 @@
 ::selection {
     background: red;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(197, 208, 219);
+}

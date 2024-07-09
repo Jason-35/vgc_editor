@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import commandReducer from '../component/Command/commandSlice'
+import sidebarReducer from '../component/Sidebar/sidebarSlice'
 
 export const store = configureStore({
   reducer: {
-    commandDisplay: commandReducer
+    commandDisplay: commandReducer,
+    sidebarDisplay: sidebarReducer,
   }
 })
 

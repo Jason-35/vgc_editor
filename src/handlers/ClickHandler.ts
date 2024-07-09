@@ -5,21 +5,19 @@ import { close } from "../component/Command/commandSlice"
 function ClickHandler() {
     const dispatch = useAppDispatch()
     useEffect(() => {
-        document.addEventListener("click", handleClick)
+        document.addEventListener("click", clickOutside)
 
         return () => {
-            document.removeEventListener("click", handleClick)
+            document.removeEventListener("click", clickOutside)
         }
     })
 
-    const handleClick = (event: Event) => {
+    const clickOutside = (event: Event) => {
         let html = event.target as HTMLDivElement
         if (!html.className.includes("command")) {
             dispatch(close())
         }
     }
-
-    return (<></>)
 }
 
 export default ClickHandler

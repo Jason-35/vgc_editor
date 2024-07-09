@@ -9,15 +9,17 @@ import { useAppSelector } from './store/storeHook'
 
 function Vgc() {
 
+  KeyHandler()
+  ClickHandler()
   const commandDisplay = useAppSelector(state => state.commandDisplay.isOpen)
 
   return (
-    <div className='h-screen bg-green-300 grid grid-cols-[15%_85%] grid-rows-[24px_auto]'>
+    <div className='h-screen bg-green-300 flex flex-col'>
         <Tabbar />
-        <Sidebar />
-        <Editor />
-        <KeyHandler />
-        <ClickHandler />
+        <div className='flex flex-1'>
+          <Sidebar />
+          <Editor />
+        </div>
         { commandDisplay ? <Command /> : <></> }
     </div>
   )

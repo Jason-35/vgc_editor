@@ -1,0 +1,4 @@
+Ctrl + B            -> Hide sidebar
+Ctrl + Shift + P    -> Command
+Ctrl + V            -> Paste
+Ctrl + C            -> Copy

@@ -1,6 +1,6 @@
 function Editor() {
   return (
-    <div className="bg-orange-300">Editor</div>
+    <div className="bg-orange-300 flex-1">Editor</div>
   )
 }
 
